@@ -11,4 +11,6 @@ list_of_state = list(df['State'].unique())
 list_of_state.insert(0, 'Overall India')
 
 st.sidebar.title = ('India ka Data Visualization')
-st.sidebar.selectbox('Select a State', list_of_state)
+Selected_state = st.sidebar.selectbox('Select a State', list_of_state)
+primary = st.sidebar.selectbox(
+    'Select Primary Parameter', sorted(df.columns[1:]))
